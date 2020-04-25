@@ -13,38 +13,44 @@ public class Movie {
     private int ImageUrl;
     private int ganre;
 
+    public Movie() {
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+    public int getImageUrl() {
+        return ImageUrl;
+    }
+
+    public void setImageUrl(int imageUrl) {
+        ImageUrl = imageUrl;
+    }
+
+    public int getGanre() {
+        return ganre;
+    }
+
+    public void setGanre(int ganre) {
+        this.ganre = ganre;
+    }
+
     public void add(Movie first) {
     }
 }
 
 
-public class AfishaManager {
-    private Movie[] movies;
-
-    public Movie[] getMovies() {
-        return null;
-    }
-
-public void add(Movie movie) {
-        movies.length = 9;
-        int length = movies.length + 1;
-        Movie[] tmp = new Movie[length];
-        System.arraycopy(movie,0, tmp, 0, movies.length);
-        int lastIndex = tmp.length - 1;
-        tmp[lastIndex] = movie;
-        movies = tmp;
-        }
-
-public Movie[] getAll(){
-        Movie[] result = new Movie[movies.length];
-    for (int i = 0; i < result.length ; i++) {
-        int index = movies.length - i - 1;
-        result[i] = movies[index];
-    }
-    return result;
-}
-
-    public void setMovies(Movie[] movies) {
-        this.movies = movies;
-    }
-}
