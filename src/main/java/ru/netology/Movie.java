@@ -1,4 +1,4 @@
-package Afisha.ru.netology;
+package ru.netology;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,10 +12,6 @@ public class Movie {
     private String Name;
     private int ImageUrl;
     private int ganre;
-
-    public Movie() {
-    }
-
 
     public int getId() {
         return id;
@@ -47,9 +43,6 @@ public class Movie {
 
     public void setGanre(int ganre) {
         this.ganre = ganre;
-    }
-
-    public void add(Movie first) {
     }
 }
 
