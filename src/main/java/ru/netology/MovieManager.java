@@ -31,9 +31,9 @@ public class MovieManager {
                 index++;
             }
         }
-        // меняем наши элементы
-        items = tmp;
+       items = tmp;
     }
+
 }
 
 
