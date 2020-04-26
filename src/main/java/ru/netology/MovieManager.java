@@ -21,19 +21,7 @@ public class MovieManager {
         return result;
     }
 
-    public void removeById(int id) {
-        int length = items.length - 1;
-        MovieManager[] tmp = new MovieManager[length];
-        int index = 0;
-        for (MovieManager item : items) {
-            if (item.getId() != id) {
-                tmp[index] = item;
-                index++;
-            }
-        }
-       items = tmp;
-    }
 
-}
+ }
 
 

@@ -3,6 +3,8 @@ package ru.netology;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 public class MovieManagerTestNonEmpty {
     @Test
     public void shouldRemoveIfExists() {
@@ -15,7 +17,7 @@ public class MovieManagerTestNonEmpty {
         manager.add(second);
         manager.add(third);
 
-        manager.removeById(idToRemove);
+        MovieRepository.removeById(idToRemove);
 
         MovieManager[] actual = manager.getAll();
         MovieManager[] expected = new MovieManager[][]{third, second};
@@ -34,7 +36,7 @@ public class MovieManagerTestNonEmpty {
         manager.add(second);
         manager.add(third);
 
-        manager.removeById(idToRemove);
+        MovieRepository.removeById(idToRemove);
 
         MovieManager[] actual = manager.getAll();
         MovieManager[] expected = new MovieManager[][]{third, second, first};
