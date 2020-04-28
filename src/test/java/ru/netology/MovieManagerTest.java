@@ -6,9 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class MovieManagerTestNonEmpty {
+
+    private MovieManager manager = new MovieManager();
     @Test
     public void shouldRemoveIfExists() {
-        MovieManager manager = new MovieManager();
         int idToRemove = 1;
         Movie first = new Movie(1, 1, "first", 1, 1);
         Movie second = new Movie(2, 2, "second", 1, 1);
@@ -27,7 +28,6 @@ public class MovieManagerTestNonEmpty {
 
     @Test
     public void shouldNotRemoveIfNotExists() {
-        MovieManager manager = new MovieManager();
         int idToRemove = 4;
         Movie first = new Movie(1, 1, "first", 1, 1);
         Movie second = new Movie(2, 2, "second", 1, 1);

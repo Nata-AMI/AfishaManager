@@ -5,7 +5,7 @@ public class MovieManager {
     int maxMovieAmount = 10;
     int minMovieAmount = 0;
 
-    public void add(MovieManager item) {
+    public void add(Movie item) {
         int length = items.length + 1;
         MovieManager[] tmp = new MovieManager[length];
         System.arraycopy(items, 0, tmp, 0, items.length);
@@ -19,7 +19,7 @@ public class MovieManager {
             MovieAmount=maxMovieAmount;
         }
         if (MovieAmount<=maxMovieAmount) {
-            MovieAmount=minMovieAmount);
+            MovieAmount=minMovieAmount;
         }
         MovieManager[] result = new MovieManager[items.length];
         for (int i = 0; i < result.length; i++) {
