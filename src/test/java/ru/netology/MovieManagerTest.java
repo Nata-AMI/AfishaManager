@@ -10,16 +10,16 @@ public class MovieManagerTestNonEmpty {
     public void shouldRemoveIfExists() {
         MovieManager manager = new MovieManager();
         int idToRemove = 1;
-        MovieManager first = new MovieManager(1, 1, "first", 1, 1);
-        MovieManager second = new MovieManager(2, 2, "second", 1, 1);
-        MovieManager third = new MovieManager(3, 3, "third", 1, 1);
+        Movie first = new Movie(1, 1, "first", 1, 1);
+        Movie second = new Movie(2, 2, "second", 1, 1);
+        Movie third = new Movie(3, 3, "third", 1, 1);
         manager.add(first);
         manager.add(second);
         manager.add(third);
 
         MovieRepository.removeById(idToRemove);
 
-        MovieManager[] actual = manager.getAll();
+        MovieManager[] actual = manager.getByOrder();
         MovieManager[] expected = new MovieManager[][]{third, second};
 
         assertArrayEquals(expected, actual);
@@ -29,16 +29,16 @@ public class MovieManagerTestNonEmpty {
     public void shouldNotRemoveIfNotExists() {
         MovieManager manager = new MovieManager();
         int idToRemove = 4;
-        MovieManager first = new MovieManager(1, 1, "first", 1, 1);
-        MovieManager second = new MovieManager(2, 2, "second", 1, 1);
-        MovieManager third = new MovieManager(3, 3, "third", 1, 1);
+        Movie first = new Movie(1, 1, "first", 1, 1);
+        Movie second = new Movie(2, 2, "second", 1, 1);
+        Movie third = new Movie(3, 3, "third", 1, 1);
         manager.add(first);
         manager.add(second);
         manager.add(third);
 
         MovieRepository.removeById(idToRemove);
 
-        MovieManager[] actual = manager.getAll();
+        MovieManager[] actual = manager.getByOrder();
         MovieManager[] expected = new MovieManager[][]{third, second, first};
 
         assertArrayEquals(expected, actual);
