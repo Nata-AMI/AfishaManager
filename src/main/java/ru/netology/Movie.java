@@ -9,9 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 public class Movie {
     private int id;
-    private String Name;
-    private int ImageUrl;
-    private int Genre;
+    private String name;
+    private String imageUrl;
+    private String genre;
 
 }
 

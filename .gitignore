@@ -1,9 +1,6 @@
-Thumbs.db*
-.DS_Store
 HELP.md
 .gradle
 build/
-target/
 
 ### STS ###
 .apt_generated
@@ -40,6 +37,7 @@ out/
 *.tar.gz
 *.rar
 
-### Node ###
-node_modules/
-/workspace.xml
+### Exclusions ###
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**
+!**/src/test/**
