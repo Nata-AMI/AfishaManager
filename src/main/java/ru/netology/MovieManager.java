@@ -3,7 +3,7 @@ package ru.netology;
 public class MovieManager {
     private Movie[] items = new Movie[0];
     int maxMovieAmount = 10;
-    int minMovieAmount = 0;
+
 
     public void add(Movie item) {
         int length = items.length + 1;
@@ -34,10 +34,12 @@ public class MovieManager {
             if (item.getId() != id) {
                 tmp[index] = item;
                 index++;
-            }
+             }
         }
         items = tmp;
+
     }
+
 
 }
 
